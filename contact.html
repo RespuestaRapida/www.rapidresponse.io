@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta title="AR JS Demos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html {
+                        font-family: 'Operator Mono', 'Monaco', 'Andale Mono', monospaced;
+                        background-color: #f3f3f3;
+                }
+                body {
+                        max-width: 400px;
+                        margin: 0 auto;
+                        padding: 1.4em;
+                        text-align: center;
+                        height: 100vh;
+                }
+                div.content {
+                        margin-top: calc(50vh - 270px);
+                }
+                input, textarea {
+                        width: 100%;
+                        margin-bottom: .3rem;
+                        margin-top: .3rem;
+                }
+    </style>
+    <script>
+      if (location.hostname !== 'localhost' && location.protocol != 'https:') {
+         location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
+    </script>
+  </head>
+
+  <body>
+    <div class="content">
+       <h1>Rapid Response</h1>
+
+       <h3>Drop us a line with the form below.</h3>
+
+      <form method="POST" action="https://formspree.io/info@rapidresponse.io">
+        <fieldset>
+          <input name="name" placeholder="Name" type="text">
+          <input name="email" placeholder="Your email" type="email">
+        </fieldset>
+        <fieldset>
+          <input name="organization" placeholder="Organization" type="text">
+        </fieldset>
+        <fieldset>
+          <textarea name="message" placeholder="What can we help you with?" rows=5></textarea>
+        </fieldset>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+
+</html>
